@@ -1,5 +1,9 @@
 package fr.wildcodeschool.thewizardproject.models;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component( "wizardMaster" )
 public class Gandalf implements WizardInterface {
 
     private Outfit myOutfit;
@@ -8,6 +12,7 @@ public class Gandalf implements WizardInterface {
 
     }
 
+    @Autowired
     public Gandalf( Outfit theOutfit ) {
         this.myOutfit = theOutfit;
     }
